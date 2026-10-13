@@ -341,7 +341,9 @@ async function _connectSocket(bot) {
     if (!m.messages || !m.messages.length) return;
     for (const msg of m.messages) {
       if (!msg.message) continue;
-      if (msg.key.fromMe) continue;
+      if (msg.key.fromMe) {
+  const _t = (msg.message?.conversation || msg.message?.extendedTextMessage?.text || '').trim();
+  if (!_t.startsWith('.'))continue;
       try {
         await handler(sock, msg, bot);
       } catch (e) {
