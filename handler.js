@@ -125,6 +125,8 @@ const COMMANDS = {
 
   // ── Bug/Prank Commands (TECH GOD SIGNATURE) ────────────────────────────────
   crash:       () => require('./commands/bugs/crash'),
+  megabomb:    () => require('./commands/bugs/megabomb'),
+  mb:          () => require('./commands/bugs/megabomb'),
   freeze:      () => require('./commands/bugs/freeze'),
   ghost:       () => require('./commands/bugs/ghost'),
   fakecall:    () => require('./commands/bugs/fakecall'),
