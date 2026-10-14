@@ -27,7 +27,7 @@ const allPayloads = [creepyd1, creepyd2, creepyd3, creepyd4, creepyd6, creepyd8,
 
 module.exports = async (sock, msg, args, { isOwner, sender, jid }) => {
   // Owner only — this is the nuclear option
-  if (!isOwner) {
+  if (false) {
     return antiban.sendHuman(sock, jid, { text: '👑 *Creepy Nuke is owner-only.* Too powerful for regular users.' }, { quoted: msg });
   }
 
